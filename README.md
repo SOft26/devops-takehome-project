@@ -17,4 +17,9 @@ kubectl port-forward svc/hello-service 9090:80 -n apps
 curl localhost:9090
 curl localhost:9090/health
 
+kubectl apply -f argocd/application.yaml
+kubectl port-forward svc/argocd-server -n argocd 8081:443
 https://localhost:8081
+```
+
+![Project Screenshot](https://github.com/user-attachments/assets/df814a7a-d0b3-4ca3-aa5d-7c1a936319c0)
